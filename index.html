@@ -1,239 +1,200 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Social Media Services — Verification, Unban & Recovery | @ahmxdplugs</title>
-  <meta name="description" content="Fast & trusted social media services: verification, bans, unbans, account recovery and profile fixes for Instagram, Facebook, TikTok & X. DM @ahmxdplugs on Telegram." />
-  <meta name="keywords" content="social media services, verification, unban, ban, account recovery, Instagram, Facebook, TikTok, X, Telegram, ahmxdplugs" />
-  <meta name="author" content="ahmxdplugs" />
-  <meta property="og:title" content="Social Media Services — Verification, Unban & Recovery" />
-  <meta property="og:description" content="Fast & trusted social media services: verification, bans, unbans, account recovery and profile fixes. DM @ahmxdplugs on Telegram." />
-  <meta property="og:type" content="website" />
-  <link rel="canonical" href="https://ahmxdplugs.github.io/social-media-services/" />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Media Services — Verification, Bans & Recovery</title>
   <style>
-    :root{
-      --bg-1: #071021;
-      --bg-2: #0c1220;
-      --card: rgba(255,255,255,0.03);
-      --muted: #9aa6b2;
-      --accent: #00d4ff;
-      --accent-2: #34d399;
-      --glass-border: rgba(255,255,255,0.06);
-      --radius: 14px;
-      --maxw: 1100px;
-      --text: #e6f0f6;
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b0f19; /* matte black/navy mix */
+      color: #f5f5dc; /* off-white / creme */
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background:
-        radial-gradient(800px 400px at 10% 10%, rgba(10,25,40,0.6), transparent 15%),
-        radial-gradient(600px 300px at 100% 0%, rgba(0,30,40,0.35), transparent 20%),
-        linear-gradient(180deg,var(--bg-1),var(--bg-2));
-      color:var(--text);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.6;
-      padding-bottom:80px;
+    header {
+      background: linear-gradient(90deg, #001f3f, #0b0f19);
+      padding: 20px;
+      text-align: center;
+      color: #00d4ff;
     }
-    .wrap{max-width:var(--maxw); margin:34px auto; padding:28px}
-    header{display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:22px}
-    .brand{display:flex; align-items:center; gap:12px}
-    .logo{
-      width:46px; height:46px; border-radius:10px;
-      background:linear-gradient(135deg,var(--accent),var(--accent-2));
-      display:flex; align-items:center; justify-content:center; color:#001; font-weight:700;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+    header img {
+      width: 70px;
+      border-radius: 50%;
+      margin-bottom: 10px;
     }
-    .brand h1{margin:0; font-size:16px; letter-spacing:0.2px}
-    nav{display:flex; gap:10px; align-items:center}
-    .nav-link{color:var(--muted); text-decoration:none; font-size:14px}
-    .hero{
-      display:grid; grid-template-columns:1fr; gap:22px; align-items:center;
-      padding:30px; border-radius:var(--radius);
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border:1px solid var(--glass-border);
-      box-shadow: 0 10px 40px rgba(3,6,12,0.6);
+    h1 {
+      margin: 10px 0;
+      font-size: 28px;
     }
-    @media(min-width:880px){ .hero{grid-template-columns: 1fr 420px} }
-    .hero-left h2{margin:0; font-size:28px; color:var(--accent);}
-    .hero-left h3{margin:8px 0 0; color:#d6e6ee; font-size:20px; font-weight:600}
-    .hero-left p{color:var(--muted); margin-top:12px}
-    .cta-row{margin-top:18px; display:flex; gap:12px; align-items:center}
-    .btn{display:inline-flex; gap:10px; align-items:center; padding:12px 16px; border-radius:999px; font-weight:700; text-decoration:none; cursor:pointer}
-    .btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent-2)); color:#001; box-shadow:0 10px 30px rgba(52,211,153,0.08)}
-    .btn-ghost{border:1px solid rgba(255,255,255,0.06); color:var(--text); background:transparent}
-    .phone-note{font-size:13px; color:var(--muted)}
-
-    .hero-right{
-      padding:18px; border-radius:12px; border:1px solid rgba(255,255,255,0.02); background:rgba(255,255,255,0.01)
+    h2 {
+      color: #00d4ff;
+      margin-top: 30px;
     }
-    .feature-list{display:grid; gap:10px}
-    .feature{display:flex; gap:12px; align-items:flex-start; padding:10px; border-radius:10px; background:rgba(0,0,0,0.15); border:1px solid rgba(255,255,255,0.02)}
-    .feature svg{flex:0 0 36px; margin-top:2px}
-    .feature h4{margin:0; font-size:15px}
-    .feature p{margin:6px 0 0; color:var(--muted); font-size:13px}
-
-    .section{margin-top:26px}
-    .cards{display:grid; gap:14px}
-    @media(min-width:880px){ .cards{grid-template-columns:repeat(3,1fr)} }
-    .card{background:var(--card); border:1px solid var(--glass-border); padding:18px; border-radius:12px}
-    .testi{padding:16px; border-radius:10px; background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00)); border:1px solid rgba(255,255,255,0.02)}
-
-    footer{margin-top:40px; text-align:center; color:var(--muted); font-size:13px}
-
-    .float-cta{
-      position:fixed; right:18px; bottom:18px; z-index:999;
-      display:inline-flex; align-items:center; gap:10px;
-      background:linear-gradient(90deg,var(--accent),var(--accent-2)); padding:12px 14px; border-radius:999px; color:#001; font-weight:800; box-shadow:0 12px 30px rgba(0,0,0,0.45);
-      text-decoration:none;
+    .btn {
+      background: #00d4ff;
+      color: #000;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 5px;
+      font-weight: bold;
+      transition: 0.3s;
     }
-
-    .small-muted{color:var(--muted); font-size:13px}
-    .tags{display:flex; gap:8px; flex-wrap:wrap; margin-top:10px}
-    .tag{padding:6px 10px; border-radius:999px; border:1px solid rgba(255,255,255,0.04); color:var(--muted); font-size:13px}
+    .btn:hover {
+      background: #0099cc;
+    }
+    .section {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .services {
+      margin-top: 20px;
+    }
+    .service-box {
+      display: none;
+      background: #111827;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+    .service-box.active {
+      display: block;
+    }
+    .testimonial {
+      background: #111827;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 10px 0;
+      box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    }
+    .faq {
+      background: #111827;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+    .faq-item {
+      margin-bottom: 15px;
+    }
+    .faq-item strong {
+      color: #00d4ff;
+    }
+    footer {
+      background: #001f3f;
+      padding: 15px;
+      text-align: center;
+      font-size: 14px;
+      color: #ccc;
+      margin-top: 30px;
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div class="brand">
-        <div class="logo">AP</div>
-        <div>
-          <h1>ahmxdplugs</h1>
-          <div class="small-muted">Social Media Services — Verification • Unban • Recovery</div>
-        </div>
-      </div>
-      <nav>
-        <a class="nav-link" href="#services">Services</a>
-        <a class="nav-link" href="#testimonials">Testimonials</a>
-        <a class="nav-link" href="#faq">FAQ</a>
-      </nav>
-    </header>
+  <header>
+    <img src="your-photo.jpg" alt="Profile"> <!-- Replace with your photo file -->
+    <h1>Trusted Social Media Solutions</h1>
+    <p>Verification, Bans & Unban, Account Recovery — Instagram • Facebook • TikTok • X</p>
+    <a href="https://t.me/yourtelegram" target="_blank"><button class="btn">DM on Telegram</button></a>
+    <button class="btn">See Services</button>
+  </header>
 
-    <main class="hero" role="main">
-      <div class="hero-left">
-        <h2>Trusted Social Media Solutions</h2>
-        <h3>Verification, Unban & Account Recovery — Instagram • Facebook • TikTok • X</h3>
-        <p>Fast response, clear process, and privacy-first handling. If your account is banned, locked, or needs verification — DM me on Telegram and I'll guide you through the steps.</p>
+  <div class="section">
+    <h2>Choose Platform</h2>
+    <button class="btn" onclick="showService('instagram')">Instagram</button>
+    <button class="btn" onclick="showService('facebook')">Facebook</button>
+    <button class="btn" onclick="showService('twitter')">X (Twitter)</button>
+    <button class="btn" onclick="showService('tiktok')">TikTok</button>
 
-        <div class="cta-row">
-          <a class="btn btn-primary" href="https://t.me/ahmxdplugs" target="_blank" rel="noopener">📩 DM on Telegram</a>
-          <a class="btn btn-ghost" href="#services">See Services</a>
-        </div>
+    <div id="instagram" class="service-box">
+      <h3>Instagram Services</h3>
+      <ul>
+        <li>Unbans & Recovery</li>
+        <li>Bans</li>
+        <li>Verification</li>
+        <li>Username Claim</li>
+      </ul>
+    </div>
 
-        <div class="tags" aria-hidden="true">
-          <span class="tag">Instagram</span>
-          <span class="tag">Facebook</span>
-          <span class="tag">TikTok</span>
-          <span class="tag">Account Recovery</span>
-        </div>
+    <div id="facebook" class="service-box">
+      <h3>Facebook Services</h3>
+      <ul>
+        <li>Unbans & Recovery</li>
+        <li>Bans</li>
+        <li>Verification</li>
+        <li>Username Claim</li>
+      </ul>
+    </div>
 
-        <p class="phone-note">Tip: Put this link in your bio — <strong>ahmxdplugs.github.io/social-media-services</strong></p>
-      </div>
+    <div id="twitter" class="service-box">
+      <h3>X (Twitter) Services</h3>
+      <ul>
+        <li>Unbans & Recovery</li>
+        <li>Bans</li>
+        <li>Username Claim</li>
+      </ul>
+    </div>
 
-      <aside class="hero-right" aria-label="Quick services">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px">
-          <div><strong>Quick Help</strong><div class="small-muted">Fast & prioritized handling</div></div>
-          <div class="small-muted">Response within 24–48 hrs</div>
-        </div>
-
-        <div class="feature-list">
-          <div class="feature">
-            <!-- shield icon -->
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l8 4v6c0 5-4 9-8 10-4-1-8-5-8-10V6l8-4z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" /></svg>
-            <div>
-              <h4>Verification</h4>
-              <p>Blue tick support for Instagram & Facebook — consultative process.</p>
-            </div>
-          </div>
-
-          <div class="feature">
-            <!-- unlock icon -->
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 11V8a5 5 0 1110 0v3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><rect x="3" y="11" width="18" height="10" rx="2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <div>
-              <h4>Unban & Recovery</h4>
-              <p>Appeals, evidence prep and step-by-step recovery guidance.</p>
-            </div>
-          </div>
-
-          <div class="feature">
-            <!-- gear icon -->
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 15.5A3.5 3.5 0 1012 8.5a3.5 3.5 0 000 7z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 01-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09a1.65 1.65 0 00-1-1.51 1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09a1.65 1.65 0 001.51-1 1.65 1.65 0 00-.33-1.82L4.21 6.9A2 2 0 017 4.07l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09c.12.64.58 1.18 1.2 1.51h.17a1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82v.17c.33.62.87 1.08 1.51 1.2H21a2 2 0 010 4h-.09c-.64.12-1.18.58-1.51 1.2v.17z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <div>
-              <h4>Consulting & Fixes</h4>
-              <p>Profile fixes, username help, page settings and best-practice guidance.</p>
-            </div>
-          </div>
-        </div>
-      </aside>
-    </main>
-
-    <section id="services" class="section">
-      <h3 style="margin-top:0">Services — How I work</h3>
-      <div style="color:var(--muted)">Quick steps I follow for most cases:</div>
-      <ol style="margin-top:10px; color:var(--muted)">
-        <li>Assess the issue & give a clear next-step plan.</li>
-        <li>Prepare evidence and appeal drafts (if needed).</li>
-        <li>Submit through the right channels and follow-up.</li>
-        <li>Keep the client updated until resolution.</li>
-      </ol>
-    </section>
-
-    <section id="testimonials" class="section">
-      <h3>What clients say</h3>
-      <div class="cards" style="margin-top:12px">
-        <div class="card testi">
-          <strong>⭐⭐⭐⭐⭐</strong>
-          <p style="margin-top:8px">Got my Instagram unbanned within 48 hours. Quick and professional — exactly what I needed. — <em>Rohit</em></p>
-        </div>
-        <div class="card testi">
-          <strong>⭐⭐⭐⭐⭐</strong>
-          <p style="margin-top:8px">Helped me with verification paperwork and profile setup. Smooth process and transparent updates. — <em>Sana</em></p>
-        </div>
-        <div class="card testi">
-          <strong>⭐⭐⭐⭐⭐</strong>
-          <p style="margin-top:8px">Reliable & private. My account was recovered without leaking any info. — <em>Arjun</em></p>
-        </div>
-      </div>
-    </section>
-
-    <section id="faq" class="section">
-      <h3>FAQ</h3>
-      <div style="margin-top:10px; color:var(--muted)">
-        <strong>Q:</strong> How do I contact you?<br>
-        <strong>A:</strong> Click any “DM on Telegram” button or go to <a href="https://t.me/ahmxdplugs" style="color:var(--accent)">@ahmxdplugs</a> on Telegram.<br><br>
-
-        <strong>Q:</strong> Do you need account passwords?<br>
-        <strong>A:</strong> No. I never ask for passwords. I help with appeals, documentation and guidance.<br><br>
-
-        <strong>Q:</strong> How long does it take?<br>
-        <strong>A:</strong> Most cases get a response in 24–72 hours, but complex cases may take longer.
-      </div>
-    </section>
-
-    <footer>
-      <div class="small-muted">© <span id="year"></span> ahmxdplugs — Social Media Services</div>
-      <div style="margin-top:8px" class="small-muted">Privacy-first • Legitimate cases only • Contact on Telegram for a fast reply</div>
-    </footer>
+    <div id="tiktok" class="service-box">
+      <h3>TikTok Services</h3>
+      <ul>
+        <li>Unbans & Recovery</li>
+        <li>Bans</li>
+        <li>Verification</li>
+        <li>Username Claim</li>
+      </ul>
+    </div>
   </div>
 
-  <a class="float-cta" href="https://t.me/ahmxdplugs" target="_blank" rel="noopener">📩 DM @ahmxdplugs</a>
+  <div class="section">
+    <h2>What Clients Say</h2>
+    <div class="testimonial">
+      ⭐⭐⭐⭐⭐ — <strong>Javier</strong>: Got an unban done quickly and professionally!
+    </div>
+    <div class="testimonial">
+      ⭐⭐⭐⭐⭐ — <strong>Trinity</strong>: Helped me with a ban, smooth and reliable service.
+    </div>
+    <div class="testimonial">
+      ⭐⭐⭐⭐⭐ — <strong>Shreesh</strong>: Account unban handled perfectly, highly recommend!
+    </div>
+  </div>
+
+  <div class="section faq">
+    <h2>❓ Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <strong>Q:</strong> How long does an Instagram unban take?<br>
+      <strong>A:</strong> We do instant (15 mins) unbans as well as manual (0–24 hrs).
+    </div>
+    <div class="faq-item">
+      <strong>Q:</strong> Do you accept middleman?<br>
+      <strong>A:</strong> Yes, we always accept reputed middleman.
+    </div>
+    <div class="faq-item">
+      <strong>Q:</strong> Can you ban verified (blue tick) Instagram accounts?<br>
+      <strong>A:</strong> Yes, absolutely we can — DM on Telegram for more info.
+    </div>
+    <div class="faq-item">
+      <strong>Q:</strong> How can I contact you?<br>
+      <strong>A:</strong> You can click on the "DM on Telegram" button to contact me.
+    </div>
+    <div class="faq-item">
+      <strong>Q:</strong> I have many questions to ask.<br>
+      <strong>A:</strong> DM on Telegram for quick replies.
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Social Media Services — All Rights Reserved
+  </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    // Smooth scroll for internal links
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', function(e){
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
-      });
-    });
+    function showService(platform) {
+      document.querySelectorAll('.service-box').forEach(div => div.classList.remove('active'));
+      document.getElementById(platform).classList.add('active');
+    }
   </script>
 </body>
 </html>
