@@ -1,199 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Social Media Services — Verification, Bans & Recovery</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ahmxd Plugs - Social Media Services</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0b0f19; /* matte black/navy mix */
-      color: #f5f5dc; /* off-white / creme */
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #0a0f24, #000000);
+      color: white;
     }
     header {
-      background: linear-gradient(90deg, #001f3f, #0b0f19);
-      padding: 20px;
       text-align: center;
-      color: #00d4ff;
+      padding: 2rem;
     }
     header img {
-      width: 70px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
-      margin-bottom: 10px;
+      margin-bottom: 1rem;
     }
     h1 {
-      margin: 10px 0;
-      font-size: 28px;
+      font-size: 2.5rem;
+      color: #4da6ff;
+      animation: fadeInDown 1s ease;
     }
     h2 {
-      color: #00d4ff;
-      margin-top: 30px;
+      color: #4da6ff;
+      margin-top: 2rem;
     }
-    .btn {
-      background: #00d4ff;
-      color: #000;
-      padding: 10px 20px;
-      border: none;
+    section {
+      padding: 2rem;
+      text-align: center;
+    }
+    .services button {
+      background: #1a1f35;
+      border: 1px solid #4da6ff;
+      color: #4da6ff;
+      padding: 0.8rem 1.5rem;
+      margin: 0.5rem;
       border-radius: 8px;
       cursor: pointer;
-      margin: 5px;
-      font-weight: bold;
-      transition: 0.3s;
+      transition: all 0.3s;
     }
-    .btn:hover {
-      background: #0099cc;
+    .services button:hover {
+      background: #4da6ff;
+      color: #000;
     }
-    .section {
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    .services {
-      margin-top: 20px;
-    }
-    .service-box {
+    .service-list {
       display: none;
-      background: #111827;
-      padding: 20px;
-      border-radius: 10px;
-      margin-top: 15px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    }
-    .service-box.active {
-      display: block;
+      margin-top: 1rem;
     }
     .testimonial {
-      background: #111827;
-      padding: 15px;
+      background: #111528;
+      margin: 1rem auto;
+      padding: 1rem;
       border-radius: 10px;
-      margin: 10px 0;
-      box-shadow: 0 0 5px rgba(0,0,0,0.5);
+      max-width: 500px;
     }
     .faq {
-      background: #111827;
-      padding: 20px;
+      background: #111528;
+      padding: 1rem;
+      margin: 1rem auto;
       border-radius: 10px;
-      margin-top: 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      max-width: 700px;
+      text-align: left;
     }
-    .faq-item {
-      margin-bottom: 15px;
-    }
-    .faq-item strong {
-      color: #00d4ff;
+    .faq h3 {
+      color: #4da6ff;
     }
     footer {
-      background: #001f3f;
-      padding: 15px;
       text-align: center;
-      font-size: 14px;
-      color: #ccc;
-      margin-top: 30px;
+      padding: 1rem;
+      background: #0a0f24;
+      margin-top: 2rem;
+    }
+    .telegram-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #0088cc;
+      color: white;
+      padding: 1rem 1.5rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="your-photo.jpg" alt="Profile"> <!-- Replace with your photo file -->
-    <h1>Trusted Social Media Solutions</h1>
-    <p>Verification, Bans & Unban, Account Recovery — Instagram • Facebook • TikTok • X</p>
-    <a href="https://t.me/yourtelegram" target="_blank"><button class="btn">DM on Telegram</button></a>
-    <button class="btn">See Services</button>
+    <img src="pfp.jpg" alt="Ahmxd Plugs" />
+    <h1>Ahmxd Plugs</h1>
+    <p>Verifications • Unbans • Bans • Recovery</p>
   </header>
 
-  <div class="section">
-    <h2>Choose Platform</h2>
-    <button class="btn" onclick="showService('instagram')">Instagram</button>
-    <button class="btn" onclick="showService('facebook')">Facebook</button>
-    <button class="btn" onclick="showService('twitter')">X (Twitter)</button>
-    <button class="btn" onclick="showService('tiktok')">TikTok</button>
+  <section class="services">
+    <h2>Our Services</h2>
+    <button onclick="toggleServices('instagram')">Instagram</button>
+    <button onclick="toggleServices('facebook')">Facebook</button>
+    <button onclick="toggleServices('twitter')">X (Twitter)</button>
+    <button onclick="toggleServices('tiktok')">TikTok</button>
 
-    <div id="instagram" class="service-box">
-      <h3>Instagram Services</h3>
-      <ul>
-        <li>Unbans & Recovery</li>
-        <li>Bans</li>
-        <li>Verification</li>
-        <li>Username Claim</li>
-      </ul>
+    <div id="instagram" class="service-list">
+      <p>Unbans/Recovery, Bans, Verifications, Username Claim</p>
     </div>
-
-    <div id="facebook" class="service-box">
-      <h3>Facebook Services</h3>
-      <ul>
-        <li>Unbans & Recovery</li>
-        <li>Bans</li>
-        <li>Verification</li>
-        <li>Username Claim</li>
-      </ul>
+    <div id="facebook" class="service-list">
+      <p>Unbans/Recovery, Bans, Verifications, Username Claim</p>
     </div>
-
-    <div id="twitter" class="service-box">
-      <h3>X (Twitter) Services</h3>
-      <ul>
-        <li>Unbans & Recovery</li>
-        <li>Bans</li>
-        <li>Username Claim</li>
-      </ul>
+    <div id="twitter" class="service-list">
+      <p>Unbans/Recovery, Bans, Username Claim</p>
     </div>
-
-    <div id="tiktok" class="service-box">
-      <h3>TikTok Services</h3>
-      <ul>
-        <li>Unbans & Recovery</li>
-        <li>Bans</li>
-        <li>Verification</li>
-        <li>Username Claim</li>
-      </ul>
+    <div id="tiktok" class="service-list">
+      <p>Unbans/Recovery, Bans, Username Claim</p>
     </div>
-  </div>
+  </section>
 
-  <div class="section">
+  <section>
     <h2>What Clients Say</h2>
-    <div class="testimonial">
-      ⭐⭐⭐⭐⭐ — <strong>Javier</strong>: Got an unban done quickly and professionally!
-    </div>
-    <div class="testimonial">
-      ⭐⭐⭐⭐⭐ — <strong>Trinity</strong>: Helped me with a ban, smooth and reliable service.
-    </div>
-    <div class="testimonial">
-      ⭐⭐⭐⭐⭐ — <strong>Shreesh</strong>: Account unban handled perfectly, highly recommend!
-    </div>
-  </div>
+    <div class="testimonial"><strong>Javier:</strong> Got an unban done by Ahmxd Plugs.</div>
+    <div class="testimonial"><strong>Trinity:</strong> Ban service was quick and smooth.</div>
+    <div class="testimonial"><strong>Shreesh:</strong> Account recovered successfully!</div>
+  </section>
 
-  <div class="section faq">
-    <h2>❓ Frequently Asked Questions</h2>
-    <div class="faq-item">
-      <strong>Q:</strong> How long does an Instagram unban take?<br>
-      <strong>A:</strong> We do instant (15 mins) unbans as well as manual (0–24 hrs).
+  <section>
+    <h2>FAQs</h2>
+    <div class="faq">
+      <h3>Q: How long does an Instagram unban take?</h3>
+      <p>A: We do instant (15 mins) unbans as well as manual (0-24 hrs).</p>
     </div>
-    <div class="faq-item">
-      <strong>Q:</strong> Do you accept middleman?<br>
-      <strong>A:</strong> Yes, we always accept reputed middleman.
+    <div class="faq">
+      <h3>Q: Do you accept middleman?</h3>
+      <p>A: Yes we do always accept reputed middleman.</p>
     </div>
-    <div class="faq-item">
-      <strong>Q:</strong> Can you ban verified (blue tick) Instagram accounts?<br>
-      <strong>A:</strong> Yes, absolutely we can — DM on Telegram for more info.
+    <div class="faq">
+      <h3>Q: Can you ban verified (blue tick) Instagram accounts?</h3>
+      <p>A: Yes, absolutely we can. DM on Telegram for more info.</p>
     </div>
-    <div class="faq-item">
-      <strong>Q:</strong> How can I contact you?<br>
-      <strong>A:</strong> You can click on the "DM on Telegram" button to contact me.
+    <div class="faq">
+      <h3>Q: How can I contact you?</h3>
+      <p>A: You can click on the "DM on Telegram" button to contact me.</p>
     </div>
-    <div class="faq-item">
-      <strong>Q:</strong> I have many questions to ask.<br>
-      <strong>A:</strong> DM on Telegram for quick replies.
+    <div class="faq">
+      <h3>Q: I have many questions to ask.</h3>
+      <p>A: DM on Telegram for quick replies.</p>
     </div>
-  </div>
+  </section>
 
   <footer>
-    © 2025 Social Media Services — All Rights Reserved
+    <p>© 2025 Ahmxd Plugs | <a href="https://t.me/ahmxdplugs" style="color:#4da6ff;">@ahmxdplugs</a></p>
   </footer>
 
+  <a href="https://t.me/ahmxdplugs" class="telegram-btn">DM on Telegram</a>
+
   <script>
-    function showService(platform) {
-      document.querySelectorAll('.service-box').forEach(div => div.classList.remove('active'));
-      document.getElementById(platform).classList.add('active');
+    function toggleServices(id) {
+      const services = document.querySelectorAll('.service-list');
+      services.forEach(service => {
+        if (service.id === id) {
+          service.style.display = service.style.display === 'block' ? 'none' : 'block';
+        } else {
+          service.style.display = 'none';
+        }
+      });
     }
   </script>
 </body>
