@@ -1,202 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ahmxd Plugs - Social Media Services</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ahmxd Plugs | Social Media Services</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
     body {
-      background: #0a192f;
-      color: #f5f5f0;
-      line-height: 1.6;
-      overflow-x: hidden;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0d1b2a; /* Dark navy */
+      color: #f5f5f5; /* Cream/offwhite */
     }
+
     header {
       text-align: center;
       padding: 2rem 1rem;
-      background: linear-gradient(135deg, #0a192f, #112240);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.6);
-    }
-    header img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      border: 3px solid #e6c200;
-      margin-bottom: 1rem;
-      object-fit: cover;
+      background: #1b263b; /* Navy shade */
     }
     header h1 {
-      font-size: 2.2rem;
+      font-size: 2.5rem;
       font-weight: 700;
-      margin-bottom: 0.25rem;
-      color: #f5f5f0;
-    }
-    header h3.subtitle {
-      font-size: 1rem;
-      font-weight: 600;
-      color: #f5f5f0; /* off-white / cream */
-      margin-bottom: 0.55rem;
-      opacity: 0.95;
+      color: #f5f5f5;
     }
     header p {
-      font-size: 1.1rem;
-      color: #e6c200;
-      margin-top: 0.25rem;
+      color: #cbd5e1; /* soft offwhite/grey */
     }
-    section {
-      padding: 3rem 1.5rem;
-      max-width: 1100px;
-      margin: auto;
-    }
-    h2 {
-      text-align: center;
-      font-size: 1.8rem;
-      margin-bottom: 2rem;
-      color: #e6c200;
-      position: relative;
-    }
+
     .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
+      padding: 3rem 1rem;
+      text-align: center;
     }
-    .card {
-      background: #112240;
+    .services h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #f5f5f5;
+    }
+    .service-buttons button {
+      margin: 0.5rem;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      background: #415a77; /* muted navy */
+      color: #f5f5f5;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .service-buttons button:hover {
+      background: #778da9; /* lighter navy */
+    }
+    .service-list {
+      display: none;
+      margin-top: 1.5rem;
+      text-align: left;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .service-list.active {
+      display: block;
+    }
+
+    .reviews, .faq {
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+    .reviews h2, .faq h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .review, .faq-item {
+      max-width: 600px;
+      margin: 1rem auto;
+      background: #1b263b;
       padding: 1.5rem;
       border-radius: 12px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      text-align: left;
+    }
+    .review h3 {
+      margin-top: 0;
+      color: #f5f5f5;
+    }
+    .faq-item h3 {
+      margin: 0 0 0.5rem;
+      color: #f5f5f5;
+    }
+    .faq-item p {
+      margin: 0;
+      color: #cbd5e1;
+    }
+
+    footer {
+      background: #1b263b;
       text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #cbd5e1;
     }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
-    }
-    .faq, .reviews {
-      background: #112240;
-      border-radius: 12px;
-      padding: 2rem;
-      margin-top: 2rem;
-    }
-    .faq-item, .review {
-      margin-bottom: 1.5rem;
-    }
-    .faq-item h4 {
-      color: #e6c200;
-      margin-bottom: 0.5rem;
-    }
-    .review h4 {
-      margin-bottom: 0.3rem;
-      color: #e6c200;
-    }
+
+    /* Floating Telegram button */
     .telegram-btn {
       position: fixed;
       bottom: 15px;
       left: 50%;
       transform: translateX(-50%);
-      background: #e6c200;
-      color: #0a192f;
-      padding: 12px 24px;
-      border-radius: 25px;
+      background: #0088cc;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      font-size: 1rem;
       font-weight: 600;
-      text-decoration: none;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.6);
-      transition: background 0.3s ease, transform 0.3s ease;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      transition: 0.3s;
       z-index: 1000;
     }
     .telegram-btn:hover {
-      background: #f5f5f0;
-      transform: scale(1.05);
-    }
-
-    /* Responsive tweaks */
-    @media (max-width: 600px) {
-      header img { width: 96px; height: 96px; }
-      header h1 { font-size: 1.6rem; }
-      header h3.subtitle { font-size: 0.95rem; }
-      .telegram-btn { padding: 10px 18px; bottom: 14px; }
+      background: #00aaff;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <img src="pfp.jpg" alt="Profile Picture">
     <h1>Ahmxd Plugs</h1>
-    <h3 class="subtitle">Social Media Services</h3>
-    <p>Verifications • Unbans • Bans • Recovery</p>
+    <p>Premium Social Media Services – Verifications, Unbans, Bans, Recovery</p>
+    <img src="pfp.jpg" alt="Profile Photo" style="margin-top:1rem; width:120px; height:120px; border-radius:50%; border:3px solid #f5f5f5;">
   </header>
 
-  <section>
-    <h2>Services</h2>
-    <div class="services">
-      <div class="card">
-        <h3>Instagram</h3>
-        <p>Unbans / Recovery<br>Bans<br>Verifications<br>Username Claim</p>
-      </div>
-      <div class="card">
-        <h3>Facebook</h3>
-        <p>Unbans / Recovery<br>Bans<br>Verifications<br>Username Claim</p>
-      </div>
-      <div class="card">
-        <h3>Twitter (X)</h3>
-        <p>Unbans / Recovery<br>Bans<br>Username Claim</p>
-      </div>
-      <div class="card">
-        <h3>TikTok</h3>
-        <p>Unbans / Recovery<br>Bans<br>Username Claim</p>
-      </div>
+  <section class="services">
+    <h2>Our Services</h2>
+    <div class="service-buttons">
+      <button onclick="showServices('instagram')">Instagram</button>
+      <button onclick="showServices('facebook')">Facebook</button>
+      <button onclick="showServices('twitter')">Twitter (X)</button>
+      <button onclick="showServices('tiktok')">TikTok</button>
     </div>
-  </section>
-
-  <section class="faq">
-    <h2>FAQs</h2>
-    <div class="faq-item">
-      <h4>Q: How long does an Instagram unban take?</h4>
-      <p>A: We do instant (15 mins) unbans as well as manual (0-24 hrs).</p>
+    <div id="instagram" class="service-list">
+      <ul>
+        <li>Unbans / Recovery</li>
+        <li>Bans</li>
+        <li>Verifications</li>
+        <li>Username Claim</li>
+      </ul>
     </div>
-    <div class="faq-item">
-      <h4>Q: Do you accept middleman?</h4>
-      <p>A: Yes, we always accept reputed middleman.</p>
+    <div id="facebook" class="service-list">
+      <ul>
+        <li>Unbans / Recovery</li>
+        <li>Bans</li>
+        <li>Verifications</li>
+        <li>Username Claim</li>
+      </ul>
     </div>
-    <div class="faq-item">
-      <h4>Q: Can you ban verified (blue tick) Instagram accounts?</h4>
-      <p>A: Yes, absolutely. DM on Telegram for more info.</p>
+    <div id="twitter" class="service-list">
+      <ul>
+        <li>Unbans / Recovery</li>
+        <li>Bans</li>
+        <li>Username Claim</li>
+      </ul>
     </div>
-    <div class="faq-item">
-      <h4>Q: How can I contact you?</h4>
-      <p>A: You can click on the Telegram button to contact me.</p>
-    </div>
-    <div class="faq-item">
-      <h4>Q: I have many questions to ask.</h4>
-      <p>A: DM on Telegram for quick replies.</p>
+    <div id="tiktok" class="service-list">
+      <ul>
+        <li>Unbans / Recovery</li>
+        <li>Bans</li>
+        <li>Username Claim</li>
+      </ul>
     </div>
   </section>
 
   <section class="reviews">
     <h2>What Clients Say</h2>
     <div class="review">
-      <h4>Javier</h4>
-      <p>Got my account unbanned super quick. Professional and reliable service, highly recommend.</p>
+      <h3>Javier</h3>
+      <p>“My Instagram got unbanned quickly thanks to Ahmxd Plugs. Fast and reliable service!”</p>
     </div>
     <div class="review">
-      <h4>Trinity</h4>
-      <p>He got a ban done for me smoothly, no issues at all. Fast and trusted service.</p>
+      <h3>Trinity</h3>
+      <p>“They helped me get a ban done professionally. Totally legit and smooth process.”</p>
     </div>
     <div class="review">
-      <h4>Shreesh</h4>
-      <p>Helped me recover and unban my account. Transparent process and quick support.</p>
+      <h3>Shreesh</h3>
+      <p>“I was locked out of my account but Ahmxd Plugs got me an unban in no time. Highly recommend.”</p>
     </div>
   </section>
 
-  <a href="https://t.me/ahmxdplugs" class="telegram-btn" target="_blank" rel="noopener">DM on Telegram</a>
+  <section class="faq">
+    <h2>FAQs</h2>
+    <div class="faq-item">
+      <h3>How long does an Instagram unban take?</h3>
+      <p>We do instant (15 mins) unbans as well as manual (0-24 hrs).</p>
+    </div>
+    <div class="faq-item">
+      <h3>Do you accept middleman?</h3>
+      <p>Yes, we always accept reputed middleman.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can you ban verified (blue tick) Instagram accounts?</h3>
+      <p>Yes, absolutely we can. DM on Telegram for more info.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How can I contact you?</h3>
+      <p>You can click the “DM on Telegram” button to contact me.</p>
+    </div>
+    <div class="faq-item">
+      <h3>I have many questions to ask.</h3>
+      <p>DM on Telegram for quick replies.</p>
+    </div>
+  </section>
 
+  <footer>
+    <p>© 2025 Ahmxd Plugs | <a href="https://t.me/ahmxdplugs" style="color:#00aaff;">@ahmxdplugs</a></p>
+  </footer>
+
+  <button class="telegram-btn" onclick="window.location.href='https://t.me/ahmxdplugs'">DM on Telegram</button>
+
+  <script>
+    function showServices(service) {
+      const lists = document.querySelectorAll('.service-list');
+      lists.forEach(list => list.classList.remove('active'));
+      document.getElementById(service).classList.add('active');
+    }
+  </script>
 </body>
 </html>
-
